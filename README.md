@@ -1,11 +1,11 @@
-# MSMS
+# SMS
 
-MSMS: a novel approach for microbial strain genome reconstruction in multiple samples
+SMS: a novel approach for microbial strain genome reconstruction in multiple samples
 
 
 =====================================================================================
 
-MSMS: a novel approach for microbial strain genome reconstruction in multiple samples
+SMS: a novel approach for microbial strain genome reconstruction in multiple samples
 
 Author: Saidi Wang
 
