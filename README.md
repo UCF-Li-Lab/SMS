@@ -238,7 +238,7 @@ NC_009515.1_1a4_0.01_100_400_3.62a6.16_0.001_8402a3220_sorted.bam_reads_frequenc
 
 NC_009515.1_2a4_0.01_100_400_0.53a12.68_0.001_5387a1108_sorted.bam_reads_frequency	1	0	0	1
 
-‘time_used.bed’ ------------- it’s the time used to get the strains from the bam file.
+‘time_used.bed’ ------------- it’s the time used to get the strains from the bam file( the final SMS method step).
 
 ========================================================================
 
