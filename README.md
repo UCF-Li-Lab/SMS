@@ -22,7 +22,7 @@ Our model is working on Linux Operating System.
                                  
 Most Easy way to set up environment is using conda. 
 
-A MSMS_py36.yml file was provided in the source directory.
+A SMS_py36.yml file was provided in the source directory.
 
 (1) Install Conda:
 
@@ -30,11 +30,11 @@ https://docs.conda.io/projects/conda/en/latest/user-guide/install/
 
 (2) Open a terminal in mixture model directory, create virtual environment by command:
 
-conda env create -f ./MSMS_py36.yml
+conda env create -f ./SMS_py36.yml
 
 (3) Before running model, go into the virtual environment by command:
 
-conda activate MSMS_py36
+conda activate SMS_py36
 
                                ###### Common problem with Virtual Environment #########
                                
@@ -94,7 +94,7 @@ Conda install samtools=1.9 or https://anaconda.org/bioconda/samtools
 
                                   ###### Preprocessing #######
                                   
-Since MSMS require bam format input, you had better input the sorted Bam file as input. However, if you only have FastQ format data, you can get a hint from our common preprocessing pipeline. But please check your experimental specification before applying our preprocessing step, because our preprocessing may be not suitable for your specific experiments. So you may need to adjust our preprocessing script based on your own experiments or trim read protocol, like single-end read, trim customized bar code or others.
+Since SMS require bam format input, you had better input the sorted Bam file as input. However, if you only have FastQ format data, you can get a hint from our common preprocessing pipeline. But please check your experimental specification before applying our preprocessing step, because our preprocessing may be not suitable for your specific experiments. So you may need to adjust our preprocessing script based on your own experiments or trim read protocol, like single-end read, trim customized bar code or others.
 
 (1) Use conda virtual environment in Virtual Environment:
 
@@ -121,14 +121,14 @@ genome_name ./example_test_data/ref.fna --res_dir ./test_res_data
 
 =====================================================================================
 
-                          ###### Parameters for Run MSMS model #######
+                          ###### Parameters for Run SMS model #######
 (1) Go into virtual environment if you deploy by virtual environment
 
-conda activate MSMS_py36
+conda activate SMS_py36
 
-(2) Run our MSMS model:
+(2) Run our SMS model:
 
-python ./MSMS.py
+python ./SMS.py
 
 --output_name output result name: Given a unique sample name for running result
 
@@ -144,11 +144,11 @@ python ./MSMS.py
 
 (3) sample input
 
-The test data has been saved in the directory of ‘example’, so you can just navigate into directory where MSMS.py located. And use below command to run example 
+The test data has been saved in the directory of ‘example’, so you can just navigate into directory where SMS.py located. And use below command to run example 
 
 data. The result will save into directory ‘example’.
 
-python MSMS.py  --output_name group1_1_NC_009515.1 --genome_len 1853160 --genome_name NC_009515.1 --genome_file_loc example/reference/GCF_000016525.1_ASM1652v1_genomic.fna --bam_loc_file  example/bam_result/group1_1_NC_009515.1_bam_loc.bed --res_dir example/MSMS_result
+python SMS.py  --output_name group1_1_NC_009515.1 --genome_len 1853160 --genome_name NC_009515.1 --genome_file_loc example/reference/GCF_000016525.1_ASM1652v1_genomic.fna --bam_loc_file  example/bam_result/group1_1_NC_009515.1_bam_loc.bed --res_dir example/MSMS_result
 
 =====================================================================================
 
@@ -158,9 +158,9 @@ python MSMS.py  --output_name group1_1_NC_009515.1 --genome_len 1853160 --genome
 
 2. output_name/result
 
-‘MSMS_result.bed’ --------
+‘SMS_result.bed’ --------
 
-This is the final prediction of strains of MSMS model. It includes coverage with corresponding polymorphic sites. In the example below, there are two strains predicted. Each strain starts with '>' and its corresponding coverage. From next row, they are the polymorphic sites of above strain. Each row is represented by allele and its position. In the example below, two strains with coverage 39.95 and 10.29. 
+This is the final prediction of strains of SMS model. It includes coverage with corresponding polymorphic sites. In the example below, there are two strains predicted. Each strain starts with '>' and its corresponding coverage. From next row, they are the polymorphic sites of above strain. Each row is represented by allele and its position. In the example below, two strains with coverage 39.95 and 10.29. 
 
 Example result (part):
 
