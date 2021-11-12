@@ -1622,7 +1622,7 @@ def get_strain(merged_file, mixture_strain_file, frequency_file_loc, result_dir)
         all_nodes_in_strain += i
 
     nodes_number_dict = Counter(all_nodes_in_strain)
-    f5_1 = open(result_dir + '/MSMS_result.bed', 'w')
+    f5_1 = open(result_dir + '/SMS_result.bed', 'w')
 
     final_strain_dict_original = {}
     for key, val in final_strain_dict.items():
