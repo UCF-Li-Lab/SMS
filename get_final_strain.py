@@ -1614,6 +1614,9 @@ def get_strain(merged_file, mixture_strain_file, frequency_file_loc, result_dir)
 
                 print('assign unnormal nodes')
                 print(final_strain_dict.keys())
+                
+                if len(list(final_strain_dict.keys())) <=2:
+                    break
 
     ################## get the original coverage of strain ##########################
     all_nodes_in_strain = []
